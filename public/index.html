@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>투데이 코디</title>
+    <style>
+        body {
+            background-color: #292323;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background-color: #444;
+            border-radius: 10px;
+        }
+        input[type="file"], input[type="text"] {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #333;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #56ab2f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>투데이 코디</h1>
+        <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="photos">옷 사진 업로드 (최대 5장)</label>
+            <input type="file" id="photos" name="photos" accept="image/*" multiple required>
+            
+            <label for="upper">상의 URL</label>
+            <input type="text" id="upper" name="upper" placeholder="상의 URL 입력">
+            
+            <label for="lower">하의 URL</label>
+            <input type="text" id="lower" name="lower" placeholder="하의 URL 입력">
+            
+            <label for="shoes">신발 URL</label>
+            <input type="text" id="shoes" name="shoes" placeholder="신발 URL 입력">
+            
+            <label for="socks">양말 URL</label>
+            <input type="text" id="socks" name="socks" placeholder="양말 URL 입력">
+            
+            <label for="accessories">악세사리 URL</label>
+            <input type="text" id="accessories" name="accessories" placeholder="악세사리 URL 입력">
+            
+            <button type="submit">게시물 올리기</button>
+        </form>
+    </div>
+</body>
+</html>
